@@ -12,9 +12,6 @@ jobs:
       - name: PHP CLI build  
         uses: aevea/action-kaniko@master
         with:
-          registry: ghcr.io
-          username: ${{ secrets.GHCR_USR }}
-          password: ${{ secrets.GHCR_PAT }}
           path: cli/
           image: digital-entropy/dokar-php/cli
           tag: "8.0"
@@ -27,9 +24,6 @@ jobs:
       - name: PHP FPM build  
         uses: aevea/action-kaniko@master
         with:
-          registry: ghcr.io
-          username: ${{ secrets.GHCR_USR }}
-          password: ${{ secrets.GHCR_PAT }}
           path: fpm/
           image: digital-entropy/dokar-php/fpm
           tag: "8.0"
@@ -42,9 +36,6 @@ jobs:
       - name: PHP NGINX build  
         uses: aevea/action-kaniko@master
         with:
-          registry: ghcr.io
-          username: ${{ secrets.GHCR_USR }}
-          password: ${{ secrets.GHCR_PAT }}
           path: nginx/
           image: digital-entropy/dokar-php/nginx
           tag: "8.0"
